@@ -42,6 +42,10 @@ section {
   animation-delay: 0.3s;
 }
 
+#education {
+  animation-delay: 0.4s;
+}
+
 /* Section entrance on scroll - using view-timeline for modern browsers */
 @supports (animation-timeline: view()) {
   section {
