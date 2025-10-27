@@ -1,9 +1,16 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 /* Custom CSS Variables for Theme */
 :root {
   --color-primary: #15803d; /* Forest green */
   --color-primary-dark: #14532d;
+}
+
+/* Dark mode color variables */
+.dark {
+  color-scheme: dark;
 }
 
 /* Smooth scrolling */
