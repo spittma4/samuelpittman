@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* Custom CSS Variables for Theme */
+:root {
+  --color-primary: #15803d; /* Forest green */
+  --color-primary-dark: #14532d;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll-based section animations */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation delays for sections */
+#header {
+  animation-delay: 0s;
+}
+
+#about {
+  animation-delay: 0.1s;
+}
+
+#projects {
+  animation-delay: 0.2s;
+}
+
+#work {
+  animation-delay: 0.3s;
+}
+
+/* Section entrance on scroll - using view-timeline for modern browsers */
+@supports (animation-timeline: view()) {
+  section {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    animation: sectionSlideIn linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+
+  @keyframes sectionSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+/* Fallback for browsers without view-timeline support */
+@supports not (animation-timeline: view()) {
+  section {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects for project cards */
+.project-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Strong line separators */
+.section-divider {
+  position: relative;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #15803d 0%, #16a34a 50%, #15803d 100%);
+}
+
+/* Animated border on focus for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #15803d;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
