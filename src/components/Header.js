@@ -14,11 +14,11 @@ export function Header() {
             <h1 class="text-5xl md:text-6xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">
               Sam Pittman
             </h1>
-            <p class="text-2xl md:text-3xl text-green-700 dark:text-green-500 font-semibold mb-4">
+            <p class="text-xl md:text-2xl text-green-700 dark:text-green-500 font-semibold mb-4">
               Senior Software Engineer
             </p>
             <p class="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 mb-6 max-w-2xl">
-              Problem solver passionate about delivering top-tier engineering guided by technical expertise and business acumen
+              <span class="text-orange-600 dark:text-orange-500 font-semibold">Problem solver</span> passionate about delivering top-tier engineering guided by technical expertise and business acumen
             </p>
 
             <!-- Current Position -->
