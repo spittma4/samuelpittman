@@ -21,7 +21,16 @@ export function Header() {
               <span class="text-orange-600 dark:text-orange-500 font-semibold">Problem solver</span> passionate about delivering top-tier engineering guided by technical expertise and business acumen
             </p>
 
-            <!-- Current Position -->
+            <!-- Current Job -->
+            <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+              <svg class="w-5 h-5 text-green-700 dark:text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <img src="/auctic_logo.svg" alt="Auctic" class="w-5 h-5">
+              <span class="text-base text-neutral-700 dark:text-neutral-300 font-medium">Auctic</span>
+            </div>
+
+            <!-- Location -->
             <div class="flex items-center justify-center md:justify-start gap-2 mb-6">
               <svg class="w-5 h-5 text-red-600 dark:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
